@@ -68,8 +68,6 @@ lambda = 1;
 [cost, grad] = costFunctionReg(initial_theta, X, y, lambda);
 
 fprintf('Cost at initial theta (zeros): %f\n', cost);
-fprintf('Gradient at initial theta (zeros): \n');
-fprintf(' %f \n', grad);
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
@@ -97,12 +95,6 @@ options = optimset('GradObj', 'on', 'MaxIter', 400);
 % Optimize
 [theta, J, exit_flag] = ...
 	fminunc(@(t)(costFunctionReg(t, X, y, lambda)), initial_theta, options);
-
-% Print theta to screen
-fprintf('Cost at theta found by fminunc: %f\n', J);
-fprintf('theta: \n');
-fprintf(' %f \n', theta);
-fprintf('exit_flag: %d\n', exit_flag);
 
 % Plot Boundary
 plotDecisionBoundary(theta, X, y);

@@ -28,7 +28,13 @@ sigma = zeros(1, size(X, 2));
 
 mu = mean(X);
 sigma = std(X);
-X_norm = (X - repmat(mu, length(X), 1)) ./ repmat(sigma, length(X), 1);
+X_norm = (X - repmat(mu,length(X),1))./(repmat(sigma, length(X),1));
+
+
+
+
+
+
 
 % ============================================================
 

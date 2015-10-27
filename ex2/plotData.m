@@ -12,13 +12,10 @@ figure; hold on;
 %               examples and 'ko' for the negative examples.
 %
 
-% Find Indices of Positive and Negative Examples
-pos = find(y==1); neg = find(y == 0);
-% Plot Examples
-plot(X(pos, 1), X(pos, 2), 'k+','LineWidth', 2, ...
-'MarkerSize', 7);
-plot(X(neg, 1), X(neg, 2), 'ko', 'MarkerFaceColor', 'y', ...
-'MarkerSize', 7);
+
+posvec = find( y==1 ); 
+negvec = find( y==0 );
+plot(X(posvec,1), X(posvec,2), "k+", "markersize", 7, X(negvec,1), X(negvec,2), "ko", "markersize", 7, "markeredgecolor", "blue", "markerfacecolor", "yellow");
 
 % =========================================================================
 

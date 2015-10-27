@@ -15,8 +15,11 @@ p = zeros(m, 1);
 %               You should set p to a vector of 0's and 1's
 %
 
-% cheating a bit here and using the round function, since threshold is 0.5
-p = round(sigmoid(X * theta));
+
+
+
+
+
 
 % =========================================================================
 
